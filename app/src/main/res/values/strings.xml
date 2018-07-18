@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">vuls</string>
+    <string name="storageSec">存储安全</string>
+    <string name="spSec">SharedPreferences安全</string>
+    <string name="ifSec">内部存储安全</string>
+    <string name="efSec">外部存储安全</string>
+    <string name="databaseSec">数据库存储安全</string>
+    <string name="getUid">获取UID</string>
+</resources>
