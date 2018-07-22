@@ -30,8 +30,11 @@
         <activity
             android:name=".activities.storage.ExternalFileActivity"
             android:label="@string/efSec" />
-        <activity android:name=".activities.storage.UidActivity"
-            android:label="@string/getUid"></activity>
+        <activity
+            android:name=".activities.storage.UidActivity"
+            android:label="@string/getUid" />
+        <activity android:name=".activities.storage.SQLiteActivity"
+            android:label="@string/databaseSec"></activity>
     </application>
 
 </manifest>

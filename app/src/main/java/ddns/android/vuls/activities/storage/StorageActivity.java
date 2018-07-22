@@ -34,7 +34,7 @@ public class StorageActivity extends AppCompatActivity implements View.OnClickLi
                 startActivity(new Intent(this, ExternalFileActivity.class));
                 break;
             case R.id.btn_database:
-                startActivity(new Intent(this, InternalFileActivity.class));
+                startActivity(new Intent(this, SQLiteActivity.class));
                 break;
             default:
                 break;
