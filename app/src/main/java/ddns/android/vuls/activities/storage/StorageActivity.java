@@ -17,6 +17,7 @@ public class StorageActivity extends AppCompatActivity implements View.OnClickLi
         findViewById(R.id.btn_internal_file).setOnClickListener(this);
         findViewById(R.id.btn_external_file).setOnClickListener(this);
         findViewById(R.id.btn_database).setOnClickListener(this);
+        findViewById(R.id.btn_logcat).setOnClickListener(this);
 
     }
 
@@ -35,6 +36,9 @@ public class StorageActivity extends AppCompatActivity implements View.OnClickLi
                 break;
             case R.id.btn_database:
                 startActivity(new Intent(this, SQLiteActivity.class));
+                break;
+            case R.id.btn_logcat:
+                startActivity(new Intent(this, LogcatActivity.class));
                 break;
             default:
                 break;

@@ -31,6 +31,12 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/btn_logcat"
+        android:text="日志存储" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:onClick="onClickGetUID"
         android:text="获取uid" />
 

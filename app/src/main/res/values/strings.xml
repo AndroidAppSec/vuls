@@ -6,4 +6,6 @@
     <string name="efSec">外部存储安全</string>
     <string name="databaseSec">数据库存储安全</string>
     <string name="getUid">获取UID</string>
+    <string name="logcatSec">Logcat</string>
+
 </resources>
