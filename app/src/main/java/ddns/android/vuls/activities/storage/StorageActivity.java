@@ -18,6 +18,9 @@ public class StorageActivity extends AppCompatActivity implements View.OnClickLi
         findViewById(R.id.btn_external_file).setOnClickListener(this);
         findViewById(R.id.btn_database).setOnClickListener(this);
         findViewById(R.id.btn_logcat).setOnClickListener(this);
+        findViewById(R.id.btn_screen_shot).setOnClickListener(this);
+        findViewById(R.id.btn_clipboard).setOnClickListener(this);
+        findViewById(R.id.btn_keyboard_cache).setOnClickListener(this);
 
     }
 
@@ -39,6 +42,15 @@ public class StorageActivity extends AppCompatActivity implements View.OnClickLi
                 break;
             case R.id.btn_logcat:
                 startActivity(new Intent(this, LogcatActivity.class));
+                break;
+            case R.id.btn_screen_shot:
+                startActivity(new Intent(this, ScreenShotActivity.class));
+                break;
+            case R.id.btn_clipboard:
+                startActivity(new Intent(this, ClipboardActivity.class));
+                break;
+            case R.id.btn_keyboard_cache:
+                startActivity(new Intent(this, KeyboardCacheActivity.class));
                 break;
             default:
                 break;

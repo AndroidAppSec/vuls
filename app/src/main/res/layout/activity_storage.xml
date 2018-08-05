@@ -40,4 +40,22 @@
         android:onClick="onClickGetUID"
         android:text="获取uid" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_screen_shot"
+        android:text="screenshot" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_clipboard"
+        android:text="clipboard" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_keyboard_cache"
+        android:text="@string/keyboardcache" />
+
 </LinearLayout>
