@@ -6,16 +6,11 @@
 
 
     <Button
-        android:id="@+id/btn_storage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="存储安全" />
+        android:text="HttpsURLConnection"
+        android:id="@+id/btn_HttpsURLConnection"/>
 
-    <Button
-        android:id="@+id/btn_net"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="传输安全" />
 
 
 </LinearLayout>

@@ -32,3 +32,5 @@
       public *** println(...);
       public *** print(...);
 }
+
+-dontwarn ***

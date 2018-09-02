@@ -6,16 +6,22 @@
 
 
     <Button
-        android:id="@+id/btn_storage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="存储安全" />
+        android:text="默认请求"
+        android:onClick="doHttpsURLConnection"/>
 
     <Button
-        android:id="@+id/btn_net"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="传输安全" />
+        android:text="不做任何校验"
+        android:onClick="doCheckNothing"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="只校验host"
+        android:onClick="doCheckHost"/>
 
 
 </LinearLayout>

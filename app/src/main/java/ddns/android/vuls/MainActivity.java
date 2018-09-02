@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import ddns.android.vuls.activities.net.NetActivity;
 import ddns.android.vuls.activities.storage.StorageActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -14,12 +15,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViewById(R.id.btn_storage).setOnClickListener(this);
+        findViewById(R.id.btn_net).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_storage:
+                startActivity(new Intent(this, StorageActivity.class));
+                break;
+            case R.id.btn_net:
+                startActivity(new Intent(this, NetActivity.class));
+                break;
 
-        startActivity(new Intent(this, StorageActivity.class));
+            default:
+                    break;
+        }
+
+
     }
 
 }
