@@ -8,14 +8,9 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="HttpsURLConnection"
-        android:id="@+id/btn_HttpsURLConnection"/>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="SSL Pinning"
-        android:id="@+id/btn_SSLPinning"/>
+        android:text="okhttp"
+        android:id="@+id/btn_12306"
+        android:onClick="okhttp3"/>
 
 
 

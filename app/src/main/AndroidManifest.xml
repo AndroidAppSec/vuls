@@ -58,8 +58,11 @@
         <activity
             android:name=".activities.net.NetActivity"
             android:label="传输安全" />
-        <activity android:name=".activities.net.HttpsURLConnectionActivity"
-            android:label="HttpsURLConnection"></activity>
+        <activity
+            android:name=".activities.net.HttpsURLConnectionActivity"
+            android:label="HttpsURLConnection" />
+        <activity android:name=".activities.net.SSLPinningActivity"
+            android:label="SSL Pinning" />
     </application>
 
 </manifest>
