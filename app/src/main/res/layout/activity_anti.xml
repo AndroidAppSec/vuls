@@ -8,20 +8,20 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="HttpsURLConnection"
-        android:id="@+id/btn_HttpsURLConnection"/>
+        android:text="防重打包"
+        android:onClick="checkSignature"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SSL Pinning"
-        android:id="@+id/btn_SSLPinning"/>
+        android:text="检查代理"
+        android:onClick="checkProxy"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Anti"
-        android:id="@+id/btn_anti"/>
+        android:text="检查 Hook 框架"
+        android:onClick="checkHook"/>
 
 
 

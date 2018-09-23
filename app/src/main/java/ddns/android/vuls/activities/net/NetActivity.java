@@ -16,6 +16,7 @@ public class NetActivity extends AppCompatActivity implements View.OnClickListen
         setContentView(R.layout.activity_net);
         findViewById(R.id.btn_HttpsURLConnection).setOnClickListener(this);
         findViewById(R.id.btn_SSLPinning).setOnClickListener(this);
+        findViewById(R.id.btn_anti).setOnClickListener(this);
 
     }
 
@@ -27,6 +28,9 @@ public class NetActivity extends AppCompatActivity implements View.OnClickListen
                 break;
             case R.id.btn_SSLPinning:
                 startActivity(new Intent(this, SSLPinningActivity.class));
+                break;
+            case R.id.btn_anti:
+                startActivity(new Intent(this, AntiActivity.class));
                 break;
             default:
                 break;

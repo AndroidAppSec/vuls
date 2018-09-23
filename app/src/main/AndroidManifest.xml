@@ -61,8 +61,13 @@
         <activity
             android:name=".activities.net.HttpsURLConnectionActivity"
             android:label="HttpsURLConnection" />
-        <activity android:name=".activities.net.SSLPinningActivity"
+        <activity
+            android:name=".activities.net.SSLPinningActivity"
             android:label="SSL Pinning" />
+        <activity
+            android:name=".activities.net.AntiActivity"
+            android:label="Anti"
+            />
     </application>
 
 </manifest>
