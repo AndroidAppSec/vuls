@@ -4,6 +4,9 @@
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
+    <permission android:name="ddns.permission.DEFAULT_PERMISSION"
+        android:protectionLevel="normal" />
+
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
@@ -66,8 +69,44 @@
             android:label="SSL Pinning" />
         <activity
             android:name=".activities.net.AntiActivity"
-            android:label="Anti"
-            />
+            android:label="Anti" />
+        <activity
+            android:name=".activities.Activity.ActivityActivity"
+            android:label="Activity安全" />
+        <activity
+            android:name=".activities.Activity.LoginActivity"
+            android:label="绕过登录认证" />
+        <activity
+            android:name=".activities.Activity.AccountActivity"
+            android:exported="true"
+            android:label="账户信息" />
+        <activity
+            android:name=".activities.Activity.Dos1Activity"
+            android:label="DOS1">
+            <intent-filter>
+                <action android:name="android.intent.action.DOS1" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.Activity.Dos2Activity"
+            android:label="DOS2">
+            <intent-filter>
+                <action android:name="android.intent.action.DOS2" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.Activity.WebActivity"
+            android:label="浏览网站"/>
+        <activity
+            android:name=".activities.Activity.WebviewActivity"
+            android:label="浏览网页"
+            android:exported="true"
+            android:permission="ddns.permission.DEFAULT_PERMISSION" >
+        </activity>
     </application>
 
 </manifest>

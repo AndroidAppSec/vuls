@@ -5,23 +5,16 @@
     android:orientation="vertical" >
 
 
-    <Button
-        android:id="@+id/btn_storage"
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="存储安全" />
+        android:id="@+id/et_weburl"
+        android:hint="输入网址"/>
 
     <Button
-        android:id="@+id/btn_net"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="传输安全" />
-
-    <Button
-        android:id="@+id/btn_activity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Activity 安全" />
-
+        android:text="浏览网站"
+        android:onClick="visitWeb"/>
 
 </LinearLayout>

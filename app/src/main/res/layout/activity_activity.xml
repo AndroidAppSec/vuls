@@ -6,22 +6,23 @@
 
 
     <Button
-        android:id="@+id/btn_storage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="存储安全" />
+        android:text="绕过登录认证"
+        android:onClick="bypassLogin"/>
 
     <Button
-        android:id="@+id/btn_net"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="传输安全" />
+        android:text="打开任意网站"
+        android:onClick="openWebsite"/>
 
     <Button
-        android:id="@+id/btn_activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Activity 安全" />
+        android:text="使用浏览器打开网站"
+        android:onClick="openWebsiteWithBrowser"/>
+
 
 
 </LinearLayout>

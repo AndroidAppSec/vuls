@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import ddns.android.vuls.activities.Activity.ActivityActivity;
 import ddns.android.vuls.activities.net.NetActivity;
 import ddns.android.vuls.activities.storage.StorageActivity;
 
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         findViewById(R.id.btn_storage).setOnClickListener(this);
         findViewById(R.id.btn_net).setOnClickListener(this);
+        findViewById(R.id.btn_activity).setOnClickListener(this);
     }
 
     @Override
@@ -26,6 +28,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_net:
                 startActivity(new Intent(this, NetActivity.class));
+                break;
+            case R.id.btn_activity:
+                startActivity(new Intent(this, ActivityActivity.class));
                 break;
 
             default:

@@ -4,24 +4,25 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
-
-    <Button
-        android:id="@+id/btn_storage"
+    <EditText
+        android:id="@+id/et_ac_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="存储安全" />
+        android:hint="用户名" />
 
-    <Button
-        android:id="@+id/btn_net"
+    <EditText
+
+        android:id="@+id/et_ac_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="传输安全" />
+        android:hint="密码"
+        />
+
 
     <Button
-        android:id="@+id/btn_activity"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Activity 安全" />
-
+        android:onClick="login"
+        android:text="保 存" />
 
 </LinearLayout>
