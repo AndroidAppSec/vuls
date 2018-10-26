@@ -3,8 +3,10 @@
     package="ddns.android.vuls">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
 
-    <permission android:name="ddns.permission.DEFAULT_PERMISSION"
+    <permission
+        android:name="ddns.permission.DEFAULT_PERMISSION"
         android:protectionLevel="normal" />
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
@@ -100,13 +102,31 @@
         </activity>
         <activity
             android:name=".activities.Activity.WebActivity"
-            android:label="浏览网站"/>
+            android:label="浏览网站" />
         <activity
             android:name=".activities.Activity.WebviewActivity"
-            android:label="浏览网页"
             android:exported="true"
-            android:permission="ddns.permission.DEFAULT_PERMISSION" >
-        </activity>
+            android:label="浏览网页"
+            android:permission="ddns.permission.DEFAULT_PERMISSION" />
+        <activity
+            android:name=".activities.Services.ServiceActivity"
+            android:label="Service 安全" />
+
+        <service
+            android:name=".services.SMSService"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="vuls.intent.action.SMSService" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+
+        <service
+            android:name=".services.NetService"
+            android:enabled="true"
+            android:exported="true" />
+
     </application>
 
 </manifest>

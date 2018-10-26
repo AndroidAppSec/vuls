@@ -4,30 +4,26 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
-
-    <Button
-        android:id="@+id/btn_storage"
+    <EditText
+        android:id="@+id/et_phonenum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="存储安全" />
+        android:hint="电话号码"
+        android:inputType="textNoSuggestions"/>
 
-    <Button
-        android:id="@+id/btn_net"
+    <EditText
+
+        android:id="@+id/et_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="传输安全" />
+        android:hint="短信内容"
+        />
 
     <Button
-        android:id="@+id/btn_activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Activity 安全" />
-
-    <Button
-        android:id="@+id/btn_service"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Service 安全" />
-
+        android:text="发送短信"
+        android:onClick="sendSMS"
+        />
 
 </LinearLayout>
