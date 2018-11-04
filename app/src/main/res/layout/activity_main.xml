@@ -29,5 +29,11 @@
         android:layout_height="wrap_content"
         android:text="Service 安全" />
 
+    <Button
+        android:id="@+id/btn_broadcast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Broadcast 安全" />
+
 
 </LinearLayout>

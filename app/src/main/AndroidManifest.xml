@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
 
     <permission
         android:name="ddns.permission.DEFAULT_PERMISSION"
@@ -111,19 +112,37 @@
         <activity
             android:name=".activities.Services.ServiceActivity"
             android:label="Service 安全" />
+        <activity
+            android:name=".activities.Broadcast.LoginBroadcastActivity"
+            android:label="Broadcast 安全" />
+
+        <activity android:name=".activities.Broadcast.BroadcastActivity"
+            android:label="Broadcast 安全"/>
 
         <service
             android:name=".services.SMSService"
-            android:enabled="true" >
+            android:enabled="true">
             <intent-filter>
                 <action android:name="vuls.intent.action.SMSService" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </service>
-
-
         <service
             android:name=".services.NetService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name=".TokenReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="100">
+                <action android:name="ddns.action.Token" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".activities.Broadcast.DosReceiver"
             android:enabled="true"
             android:exported="true" />
 
