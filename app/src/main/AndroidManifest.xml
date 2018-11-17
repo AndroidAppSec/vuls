@@ -9,6 +9,12 @@
     <permission
         android:name="ddns.permission.DEFAULT_PERMISSION"
         android:protectionLevel="normal" />
+    <permission
+        android:name="ddns.permission.READ_PERMISSION"
+        android:protectionLevel="dangerous" />
+    <permission
+        android:name="ddns.permission.WRITE_PERMISSION"
+        android:protectionLevel="dangerous" />
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -115,9 +121,9 @@
         <activity
             android:name=".activities.Broadcast.LoginBroadcastActivity"
             android:label="Broadcast 安全" />
-
-        <activity android:name=".activities.Broadcast.BroadcastActivity"
-            android:label="Broadcast 安全"/>
+        <activity
+            android:name=".activities.Broadcast.BroadcastActivity"
+            android:label="Broadcast 安全" />
 
         <service
             android:name=".services.SMSService"
@@ -146,6 +152,16 @@
             android:enabled="true"
             android:exported="true" />
 
+        <provider
+            android:name=".ContentProviders.AccountProvider"
+            android:authorities="ddns.vuls.AccountProvider"
+            android:enabled="true"
+            android:exported="true" >
+            <path-permission
+                android:readPermission="ddns.permission.READ_PERMISSION"
+                android:writePermission="ddns.permission.WRITE_PERMISSION"
+                android:path="/account" />
+        </provider>
     </application>
 
 </manifest>
