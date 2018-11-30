@@ -3,6 +3,7 @@
     package="ddns.android.vuls">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
 
@@ -156,12 +157,34 @@
             android:name=".ContentProviders.AccountProvider"
             android:authorities="ddns.vuls.AccountProvider"
             android:enabled="true"
-            android:exported="true" >
+            android:exported="true">
             <path-permission
+                android:path="/account"
                 android:readPermission="ddns.permission.READ_PERMISSION"
-                android:writePermission="ddns.permission.WRITE_PERMISSION"
-                android:path="/account" />
+                android:writePermission="ddns.permission.WRITE_PERMISSION" />
         </provider>
+
+        <activity
+            android:name=".activities.Webview.WebviewSecActivity"
+            android:label="WebView 安全" />
+        <activity
+            android:name=".activities.Webview.WvLoginActivity"
+            android:label="JS接口安全" />
+        <activity
+            android:name=".activities.Webview.CloneActivity"
+            android:label="应用克隆">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="android"
+                    android:scheme="ddns" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.Webview.WvNetActivity"></activity>
     </application>
 
 </manifest>

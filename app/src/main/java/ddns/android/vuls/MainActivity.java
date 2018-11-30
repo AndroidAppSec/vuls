@@ -9,6 +9,7 @@ import ddns.android.vuls.activities.Activity.ActivityActivity;
 import ddns.android.vuls.activities.Broadcast.BroadcastActivity;
 import ddns.android.vuls.activities.Broadcast.LoginBroadcastActivity;
 import ddns.android.vuls.activities.Services.ServiceActivity;
+import ddns.android.vuls.activities.Webview.WebviewSecActivity;
 import ddns.android.vuls.activities.net.NetActivity;
 import ddns.android.vuls.activities.storage.StorageActivity;
 
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_activity).setOnClickListener(this);
         findViewById(R.id.btn_service).setOnClickListener(this);
         findViewById(R.id.btn_broadcast).setOnClickListener(this);
+        findViewById(R.id.btn_webview).setOnClickListener(this);
     }
 
     @Override
@@ -42,6 +44,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_broadcast:
                 startActivity(new Intent(this, BroadcastActivity.class));
+                break;
+            case R.id.btn_webview:
+                startActivity(new Intent(this, WebviewSecActivity.class));
                 break;
 
             default:
