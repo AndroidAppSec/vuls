@@ -17,6 +17,7 @@ public class NetActivity extends AppCompatActivity implements View.OnClickListen
         findViewById(R.id.btn_HttpsURLConnection).setOnClickListener(this);
         findViewById(R.id.btn_SSLPinning).setOnClickListener(this);
         findViewById(R.id.btn_anti).setOnClickListener(this);
+        findViewById(R.id.btn_proto).setOnClickListener(this);
 
     }
 
@@ -31,6 +32,9 @@ public class NetActivity extends AppCompatActivity implements View.OnClickListen
                 break;
             case R.id.btn_anti:
                 startActivity(new Intent(this, AntiActivity.class));
+                break;
+            case R.id.btn_proto:
+                startActivity(new Intent(this, ProtoActivity.class));
                 break;
             default:
                 break;

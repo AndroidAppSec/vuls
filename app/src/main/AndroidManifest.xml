@@ -184,7 +184,8 @@
                     android:scheme="ddns" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.Webview.WvNetActivity"></activity>
+        <activity android:name=".activities.Webview.WvNetActivity" />
+        <activity android:name=".activities.net.ProtoActivity"></activity>
     </application>
 
 </manifest>

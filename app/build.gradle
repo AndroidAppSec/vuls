@@ -1,10 +1,25 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.protobuf'
 
 android {
+
+    sourceSets {
+        main {
+            // 定义java文件目录
+            java {
+                srcDir 'src/main/java'
+            }
+            // 定义proto文件目录
+            proto {
+                srcDir 'src/main/proto'
+            }
+        }
+    }
+
     compileSdkVersion 27
     defaultConfig {
         applicationId "ddns.android.vuls"
-        minSdkVersion 21
+        minSdkVersion 15
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -26,6 +41,24 @@ android {
     }
 }
 
+protobuf {
+    //配置protoc编译器
+    protoc {
+        artifact = 'com.google.protobuf:protoc:3.6.1'
+    }
+    //这里配置生成目录，编译后会在build的目录下生成对应的java文件
+    generateProtoTasks {
+        all().each { task ->
+            task.builtins {
+                remove java
+            }
+            task.builtins {
+                java {}
+            }
+        }
+    }
+}
+
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:27.1.1'
@@ -35,4 +68,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    implementation 'com.google.protobuf:protobuf-java:3.6.1'
+    implementation 'com.google.protobuf:protoc:3.6.1'
 }

@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+// 返回消息体
+message Message {
+    int32 id = 2;
+    string content = 1;
+}

@@ -23,6 +23,12 @@
         android:text="Anti"
         android:id="@+id/btn_anti"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Protobuf"
+        android:id="@+id/btn_proto"/>
+
 
 
 </LinearLayout>
