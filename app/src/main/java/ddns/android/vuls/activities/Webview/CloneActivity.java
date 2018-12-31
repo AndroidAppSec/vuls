@@ -23,6 +23,10 @@ public class CloneActivity extends AppCompatActivity {
 
     private WebView webView;
 
+    public CloneActivity() {
+        Log.e("FragmentVuls", "CloneActivity constructor");
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

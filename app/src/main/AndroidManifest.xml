@@ -185,7 +185,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.Webview.WvNetActivity" />
-        <activity android:name=".activities.net.ProtoActivity"></activity>
+        <activity android:name=".activities.net.ProtoActivity" />
+        <activity
+            android:name=".activities.Activity.FragmentActivity"
+            android:exported="true"
+            android:label="Fragement 安全"
+            />
     </application>
 
 </manifest>

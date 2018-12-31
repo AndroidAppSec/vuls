@@ -31,6 +31,13 @@ public class ActivityActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void startFragementActivity(View view){
+
+        startActivity(new Intent(this, FragmentActivity.class));
+    }
+
+
+
 
 
 }

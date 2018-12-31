@@ -23,6 +23,12 @@
         android:text="使用浏览器打开网站"
         android:onClick="openWebsiteWithBrowser"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fragement 注入"
+        android:onClick="startFragementActivity"/>
+
 
 
 </LinearLayout>

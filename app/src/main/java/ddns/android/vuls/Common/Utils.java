@@ -1,11 +1,18 @@
 package ddns.android.vuls.Common;
 
+import android.util.Log;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
 public class Utils {
+
+
+    public Utils() {
+        Log.e("FragmentVuls", "Utils constructor");
+    }
 
     public static String exec(String cmd){
 
