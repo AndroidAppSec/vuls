@@ -29,6 +29,18 @@
         android:text="Protobuf"
         android:id="@+id/btn_proto"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Protostuff"
+        android:id="@+id/btn_protostuff"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ZipperDown漏洞"
+        android:id="@+id/btn_zipper"/>
+
 
 
 </LinearLayout>

@@ -22,7 +22,7 @@ import ddns.android.vuls.R;
 
 public class HttpsURLConnectionActivity extends AppCompatActivity {
 
-    private String baidu = "https://www.baidu.com";
+    private String baidu = "https://www.baidu.com/aaa";
     private String self = "https://192.168.8.233";
 
 

@@ -16,11 +16,11 @@ android {
         }
     }
 
-    compileSdkVersion 26
+    compileSdkVersion 27
     defaultConfig {
         applicationId "ddns.android.vuls"
         minSdkVersion 15
-        targetSdkVersion 26
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -35,8 +35,8 @@ android {
         release {
 //            zipAlignEnabled true
 //            shrinkResources true
-//            minifyEnabled true
-//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 }
@@ -71,4 +71,6 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:3.11.0'
     implementation 'com.google.protobuf:protobuf-java:3.6.1'
     implementation 'com.google.protobuf:protoc:3.6.1'
+    compile group: 'io.protostuff', name: 'protostuff-runtime', version: '1.6.0'
+    compile group: 'io.protostuff', name: 'protostuff-core', version: '1.6.0'
 }

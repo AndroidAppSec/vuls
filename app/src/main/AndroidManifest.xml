@@ -189,8 +189,8 @@
         <activity
             android:name=".activities.Activity.FragmentActivity"
             android:exported="true"
-            android:label="Fragement 安全"
-            />
+            android:label="Fragement 安全" />
+        <activity android:name=".activities.net.ProtoStuffActivity"></activity>
     </application>
 
 </manifest>
