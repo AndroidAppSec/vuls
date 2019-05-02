@@ -2,7 +2,6 @@ package ddns.android.vuls.activities.net;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -10,8 +9,6 @@ import android.view.View;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.net.URL;
-import java.net.URLConnection;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
@@ -35,6 +32,7 @@ public class NetActivity extends AppCompatActivity implements View.OnClickListen
         findViewById(R.id.btn_proto).setOnClickListener(this);
         findViewById(R.id.btn_zipper).setOnClickListener(this);
         findViewById(R.id.btn_protostuff).setOnClickListener(this);
+        findViewById(R.id.btn_noproxy).setOnClickListener(this);
 
     }
 
@@ -58,6 +56,9 @@ public class NetActivity extends AppCompatActivity implements View.OnClickListen
                 break;
             case R.id.btn_zipper:
                 zipperDown();
+                break;
+            case R.id.btn_noproxy:
+                startActivity(new Intent(this, NoProxyActivity.class));
                 break;
             default:
                 break;

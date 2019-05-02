@@ -41,6 +41,12 @@
         android:text="ZipperDown漏洞"
         android:id="@+id/btn_zipper"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="不走代理"
+        android:id="@+id/btn_noproxy"/>
+
 
 
 </LinearLayout>
